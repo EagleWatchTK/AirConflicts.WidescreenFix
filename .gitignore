@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+
+# Build output
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+*.dll
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
