@@ -2,33 +2,59 @@
 #include "Logger.h"
 
 #include <windows.h>
-#include <cstdio>
+#include <cstring>
 
 Resolution gResolution =
 {
-    1920,
-    1080
+    111,
+    222
 };
 
 void LoadIni()
 {
+    char path[MAX_PATH];
+
+    GetModuleFileNameA(
+        NULL,
+        path,
+        MAX_PATH);
+
+    char* slash = strrchr(path, '\\');
+
+    if (slash)
+        *(slash + 1) = '\0';
+
+    strcat_s(path, "WidescreenFix.ini");
+
     gResolution.Width = GetPrivateProfileIntA(
         "MAIN",
         "Width",
         1920,
-        ".\\WidescreenFix.ini");
+        path);
 
     gResolution.Height = GetPrivateProfileIntA(
         "MAIN",
         "Height",
         1080,
-        ".\\WidescreenFix.ini");
+        path);
 
     char buffer[128];
 
-    sprintf_s(buffer, "Width = %d", gResolution.Width);
+    wsprintfA(buffer,
+        "INI = %s",
+        path);
+
     Log(buffer);
 
-    sprintf_s(buffer, "Height = %d", gResolution.Height);
+    wsprintfA(buffer,
+        "Width = %d",
+        gResolution.Width);
+
+    Log(buffer);
+
+    wsprintfA(buffer,
+        "Height = %d",
+        gResolution.Height);
+
     Log(buffer);
 }
