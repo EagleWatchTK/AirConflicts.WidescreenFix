@@ -1,4 +1,4 @@
-# Air Conflicts Widescreen Fix
+# Air Conflicts(2006) Widescreen Fix
 
 A runtime widescreen fix for the original **Air Conflicts** using Ultimate ASI Loader.
 
