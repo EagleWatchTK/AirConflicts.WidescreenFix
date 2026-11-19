@@ -1,4 +1,4 @@
-# Air Conflicts(2006) Widescreen Fix
+# Air Conflicts (2006) / Air Conflicts: Air Battles of World War II Widescreen Fix
 
 A runtime widescreen fix for the original **Air Conflicts** using Ultimate ASI Loader.
 
