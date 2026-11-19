@@ -29,7 +29,6 @@ Height=1080
 
 ## Planned
 - Menu aspect ratio fix
-- HUD scaling improvements
 
 ## Credits
 - Author: EagleWatchTK
